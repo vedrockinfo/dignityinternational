@@ -1,0 +1,82 @@
+.global-btn-dark{
+    background: $colorPrimary;
+    color: $colorWhite;
+    border: 1px solid $colorPrimary;
+    border-radius: 3px;
+    transition: all 0.4s;
+    max-width: 15rem;
+    text-transform: uppercase;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    font-weight: 600;
+    &.d-inline-block{
+        max-width: none;
+        padding: 0 3rem;
+    }
+    &:hover{
+        background: transparent;
+    border: 1px solid $colorPrimary;
+    color: $colorPrimary;
+    }
+}
+.global-btn-light{
+    background: $colorWhite;
+    color: $colorPrimary;
+    border: 1px solid $colorWhite;
+    border-radius: 3px;
+    transition: all 0.4s;
+    max-width: 15rem;
+    text-transform: uppercase;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    font-weight: 600;
+    box-shadow: 3px 3px 0 #696969;
+    &.d-inline-block{
+        max-width: none;
+        padding: 0 3rem;
+    }
+    &:hover{
+        background: transparent;
+    border: 1px solid $colorWhite;
+    color: $colorWhite;
+    box-shadow: none;
+    }
+}
+.global-btn-light-two{
+    background: #ccc;
+    color: $colorBlack;
+    border: 1px solid $colorWhite;
+    border-radius: 3px;
+    transition: all 0.4s;
+    max-width: 15rem;
+    text-transform: uppercase;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    font-weight: 600;
+    box-shadow: 3px 3px 0 #696969;
+    &:hover{
+    box-shadow: none;
+    }
+}
+.global-btn-light-three{
+    background: $colorWhite;
+    color: $colorBlack;
+    border: 4px solid $colorWhite;
+    border-radius: 30px;
+    transition: all 0.4s;
+    text-transform: uppercase;
+    padding: 4px 3rem;
+    display: inline-block;
+    font-weight: 600;
+    @media screen and (min-width:992px) and (max-width:1150px) {
+        padding: 3px 1rem;
+    }
+    &:hover{
+    box-shadow: none;
+    background: $colorPrimary;
+    color: $colorWhite;
+    }
+}

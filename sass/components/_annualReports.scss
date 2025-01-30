@@ -1,0 +1,46 @@
+.annual-reports{
+    background: $colorPrimary;
+    .annual-report{
+        .row{
+            row-gap: 10rem;
+            @include respond (maxWidth575){
+                row-gap: 4rem;
+            }
+        }
+        .report-card{
+            padding: 0 3rem 3rem;
+            border: 4px solid $colorWhite;
+            position: relative;
+            height: 100%;
+            @include respond (maxWidth575){
+                padding: 2rem;
+            }
+            .img-wrapper{
+                overflow: hidden;
+                @include respond (minWidth575){
+                    margin-top: -4rem;
+                }
+            }
+            .content-wrapper{
+                padding-top: 3rem;
+                @include respond (maxWidth992){
+                    text-align: center;
+                    p{
+                        text-align: left;
+                    }
+                }
+                p{
+                    color: $colorWhite;
+                }
+                .global-btn-light-three{
+                    @include respond (minWidth992){
+                        position: absolute;
+                        bottom: -2.1rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}

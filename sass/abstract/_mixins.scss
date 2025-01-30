@@ -1,0 +1,120 @@
+@mixin tabsarea {
+    .nav-area {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+
+        .nav-item {
+            width: calc(100% / 5);
+            height: 15rem;
+
+            @include respond (maxWidth768) {
+                width: calc(100% / 2);
+                height: 10rem;
+                border: 0.5px solid $colorPrimary;
+            }
+
+            .tab-link {
+                display: block;
+                height: 100%;
+                background: $colorWhite;
+            }
+
+            &:not(:last-child) {
+                .tab-link {
+                    border-right: 1px solid #000;
+                }
+            }
+
+            .global-tabs {
+                text-align: center;
+                padding: 2rem 1.5rem;
+
+                @include respond (maxWidth768) {
+                    padding: 0;
+                }
+
+                height: 100%;
+                display: grid;
+                place-content: center;
+                box-shadow: 1px 0.2px 3px #0000003d;
+
+                img {
+                    height: 5rem;
+                    width: 5rem;
+                    margin: 0 auto;
+                    object-fit: contain;
+                    object-position: bottom;
+
+                    @include respond (maxWidth575) {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+                }
+
+                h6 {
+                    color: $colorPrimary;
+                    font-size: 1.6rem;
+                    text-align: center;
+
+                    @include respond (maxWidth768) {
+                        padding: 0.4rem;
+                    }
+
+                    text-transform: uppercase;
+                }
+            }
+
+            .active {
+                font-weight: bold;
+                position: relative;
+                padding: 0;
+
+                &::before {
+                    content: "";
+                    background: $colorGrey;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    bottom: -4rem;
+                    left: 0;
+
+                    @include respond (maxWidth768) {
+                        content: none;
+                    }
+                }
+
+                .global-tabs {
+                    background: $colorPrimary;
+
+                    @include respond (minWidth768) {
+                        transform: scale(1.2);
+                    }
+
+                    border: 1px solid $colorWhite;
+                    position: relative;
+
+                    img {
+                        filter: invert(1) brightness(2);
+                    }
+
+                    h6 {
+                        color: $colorWhite;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tab-content-wrapper {
+    display: none;
+    margin-top: 4rem;
+
+    &.active {
+        display: block;
+    }
+}

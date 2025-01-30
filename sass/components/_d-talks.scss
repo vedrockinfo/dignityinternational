@@ -1,0 +1,199 @@
+.d-talks-cta{
+    background: $colorPrimary;
+    position: relative;
+    p{
+        color: $colorWhite;
+    }
+}
+.dtalks-speak{
+    .heading-secondary {
+        color: $colorWhite;
+        background: $colorPrimary;
+        display: inline-block;
+        padding: 6px 50px 6px 0px;
+        margin-bottom: 3rem;
+        position: relative;
+        text-transform: uppercase;
+        &::before{
+            content: "";
+            background: $colorPrimary;
+            position: absolute;
+            left: -99%;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            @media screen and (min-width:1600px) {
+                left: -248%;
+                transform: scaleX(4);
+            }
+        }
+    }
+    @include respond (minWidth575){
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 42% 58%;
+            align-items: baseline;
+            .heading-four{
+                font-weight: 600;
+            }
+        }
+    }
+}
+.d-talks-cta{
+    p{
+        font-size: 2rem!important;
+        font-weight: 300;
+        font-style: oblique;
+        @include respond (minWidth768){
+            padding-right: 20rem;
+        }
+    }
+    .btn.btn-four{
+        background:$colorWhite;
+  color: $colorPrimary;
+  border: 1px solid $colorWhite;
+  border-radius: 30px;
+  transition: $transition;
+  width: 200px;
+  text-transform: uppercase;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  font-weight: 600;
+  @include respond (maxWidth768) {
+    width: 160px;
+    height: 40px;
+    margin: auto;
+  }
+  &:hover {
+    background: transparent;
+    border: 1px solid $colorWhite;
+    color: $colorWhite;
+  }
+    }
+}
+.top-dtalks{
+    .link-one {
+        text-align: center;
+        a{
+            max-width: none !important;
+            display: inline-block;
+            padding: 0 30px;
+    }
+    }
+    .tab-area{
+        .list-group{
+            .list-group-item{
+                background: $colorPrimary;
+                color: $colorWhite;
+                text-align: center;
+                padding: 15px 0;
+                font-weight: 700;
+                &.active{
+                    background: #50b753;
+                    position: relative;
+                    &::before{
+                        background: #50b753;
+                        position: absolute;
+                        content: "";
+                        bottom: -7.5px;
+                        width: 15px;
+                        height: 15px;
+                        left: 50%;
+                        transform: translateX(-50%) rotate(45deg);
+                    }
+                }
+            }
+        }
+        .tab-content{
+            .tab-pane{
+                .d-talks-video-grid{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    row-gap: 2rem;
+                    column-gap: 1.5rem;
+                    padding: 3rem 1.5rem;
+                    @media screen and (min-width:992px) and (max-width:1199.9px) {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                    @media screen and (min-width:575px) and (max-width:991.9px) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    @media screen and (max-width:575.9px) {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                    &__items{
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                        position: relative;
+                        transition: all 0.5s;
+                        &::before{
+                            content: "";
+                            background: $colorPrimary;
+                            height: 3px;
+                            width: 0;
+                            bottom: 0;
+                            left: 0;
+                            position: absolute;
+                            transition: all 0.5s;
+                        }
+                        &:hover{
+                            transform: translateY(-3px);
+                            &::before{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &__wrapper{
+                        position: relative;
+                        .overlay{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 100%;
+                            height: 100%;
+                            background: transparent;
+                            border: none;
+                            img{
+                                width: 4.8rem;
+                            }
+                        }
+                    }
+                    &__content{
+                        padding: 2.5rem 1rem;
+                        h4{
+                            font-size: 15px;
+                            font-weight: 700;
+                            color: $colorPrimary;
+                            text-align: center;
+                        }
+                        p{
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 16px;
+                            text-align: center;
+                        }
+                    }
+                }
+                .modal-content{
+                            position: relative;
+                            background: transparent;
+                            .btn-close{
+                                position: absolute;
+                                right: -15px;
+                                top: -20px;
+                                z-index: 1;
+                                opacity: 1;
+                                i{
+                                    color: $colorWhite;
+                                    font-size: 2rem;
+                                }
+                            }
+                            .modal-body{
+                            padding: 0;
+                        }
+                        }
+            }
+        }
+    }
+}

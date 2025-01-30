@@ -1,0 +1,186 @@
+header {
+    width: 100%;
+    background: $colorWhite;
+    border-bottom: 1px solid rgba($colorPrimary, $alpha: 0.2);
+    @include respond (respond (DeviceMaximum992)) {
+      ul.navbar-nav {
+        width: 85%;
+        margin: auto;
+        height: 75vh;
+        overflow: scroll;
+      }
+    }
+    a.navbar-brand {
+      img{
+        width: 15rem;
+      }
+    }
+    transition: $transition;
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+  
+    .navbar {
+      .navbar-toggler {
+        border: none !important;
+      }
+      &.fixed-top{
+        top: -40px;
+      transform: translateY(40px);
+      transition: transform .7s;
+      background: $colorWhite;
+      }
+    }
+    nav {
+      @media screen and (min-width: 992.5px) {
+        background: transparent;
+      }
+      @include respond (respond (DeviceMaximum992)) {
+        background-color: $colorWhite;
+      }
+      .chimney{
+        padding-right: 1rem;
+        i{
+            font-size: 3rem;
+            color: rgba($colorPrimary, $alpha: 1);
+        }
+      }
+      .nav-item {
+        @include respond (minWidth992){
+            &:not(:last-child){
+                a{
+                    position: relative;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        right: -2px;
+                        top: 7px;
+                        width: 2px;
+                        height: calc(100% - 15px);
+                        background: rgba($colorPrimary, $alpha: 1);
+                    }
+                }
+            }
+        }
+        a{
+          font-size: 12px;
+          color: $colorPrimary;
+          text-transform: uppercase;
+          font-weight: 700;
+          padding: 0px 20px !important;
+            border-top: 4px solid rgba(#ccc, $alpha: 0.4);
+            margin-right: 2px;
+          &:hover{
+            color: $colorPrimary;
+          }
+          &.active, &.show{
+            color: $colorPrimary!important;
+            border-top: 4px solid rgba($colorPrimary, $alpha: 1);
+          }
+        }
+      }
+      .collapse {
+        justify-content: flex-end;
+        @include respond (DeviceMaximum992) {
+          background-color: $colorWhite;
+          z-index: 9;
+        }
+      }
+      .navbar-nav {
+        @include respond (minWidth1400) {
+          gap: 15px;
+        }
+        @include respond (DeviceMinmum992) {
+          align-items: center;
+          justify-content: space-between;
+      width: 100%;
+        }
+      }
+      .dropdown {
+        & > a {
+          &::after {
+            content: "\f078";
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            border-top: none;
+            font-size: 10px;
+            vertical-align: 3px;
+          }
+        }
+        .dropdown-menu {
+          @media screen and (max-width: 991.5px) {
+            display: block;
+            position: static;
+            padding: 0 30px;
+          }
+          border-left: none;
+          border-right: none;
+          border-bottom: none;
+          border-top: 3px solid $colorPrimary;
+          box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+          border-radius: 0 0 15px 15px;
+          li:not(:last-child) {
+            padding: 3px 0;
+            margin: 3px 5px;
+            border-bottom: 1px solid rgba($colorPrimary, $alpha: 0.2);
+          }
+          li a {
+            text-transform: uppercase;
+          }
+        }
+        @media screen and (max-width: 992) {
+          .dropdown {
+            .dropdown-menu {
+              display: none;
+              transition: $transition;
+            }
+            &:hover {
+              .dropdown-menu {
+                display: block;
+              }
+            }
+          }
+        }
+        @include respond (DeviceMinmum992) {
+          .dropdown-menu {
+            display: block;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10%);
+            transition: $transition;
+          }
+          &:hover {
+            .dropdown-menu {
+              opacity: 1;
+              visibility: visible;
+              transform: none;
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
+    .support a, .login a{
+      font-size: 12px;
+      color: $colorPrimary;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 0px 5px !important;
+        margin-right: 2px;
+      &:hover{
+        color: $colorPrimary;
+      }
+      &.active, &.show{
+        color: $colorPrimary!important;
+      }
+    }
+  }
+  
+  // @include respond (DeviceMaximum992){
+  //   .dropdown-toggle + ul.dropdown-menu{
+  //   display: none;
+  // }
+  // }

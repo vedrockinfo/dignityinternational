@@ -1,0 +1,85 @@
+.upcoming-events-page {
+    background: $colorPrimary;
+    .upcoming-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+        column-gap: 30px;
+        @include respond (maxWidth768){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .eventsection {
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        border-radius: 10px;
+
+        .eventsectionimg {
+            position: relative;
+           
+
+            .eventonline {
+                position: absolute;
+                top: 8px;
+                right: 10px;
+
+                span {
+                    color: $colorWhite;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    border: 2px solid $colorPrimary;
+                    padding: 3px 20px;
+                    border-radius: 20px;
+                    color: $colorWhite;
+                    background: $colorPrimary;
+                }
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                border-radius: 10px 10px 0 0;
+            }
+        }
+
+        .eventsection-contents {
+            padding: 24px 0 30px 0;
+            border-radius: 0 0 10px 10px;
+            min-height: 260px;
+            @include respond (maxWidth768){
+                height: auto;
+                padding: 16px;
+            }
+
+            h6 {
+                margin-bottom: 8px;
+                font-weight: 600;
+                font-size: 12px;
+                color: $colorWhite;
+                line-height: 1.0625rem;
+            }
+
+            h4 {
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: capitalize;
+                color: $colorWhite;
+                margin-bottom: 12px;
+                margin-top: 12px;
+            }
+
+            p {
+                margin-bottom: 0;
+                font-size: 15px;
+                color: $colorWhite;
+                a{
+                    margin-top: 3rem;
+                }
+            }
+        }
+    }
+}

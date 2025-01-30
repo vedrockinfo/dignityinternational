@@ -1,0 +1,85 @@
+.our-story{
+    @include respond (maxWidth768){
+        svg{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .content-wrapper{
+        background: $colorGrey;
+        padding: 2.5rem 4rem;
+        .mission-wrapper{
+            @include respond (minWidth992){
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                .left-side, .right-side{
+                    width: 50%;
+                }
+                .left-side{
+                    padding-right: 4rem;
+                }
+                .right-side{
+                    padding-left: 4rem;
+                    border-left: 4px solid $colorPrimary;
+                }
+            }
+        }
+    }
+    .chronical-area{
+        background-image: url(../images/background-world-map.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @font-face { font-family:"Calibri";font-variant:normal;font-style:normal;font-weight:bold;src:url("#FontID0") format(svg)}
+                        .fil9 {fill:#FEFEFE}
+                        .fil8 {fill:#0082D2}
+                        .fil3 {fill:#00AA87}
+                        .fil4 {fill:#00AAB4}
+                        .fil2 {fill:#00D2AA}
+                        .fil5 {fill:#00D7E1}
+                        .fil6 {fill:#0A62A5}
+                        .fil1 {fill:#64B44B}
+                        .fil0 {fill:#8CD26E}
+                        .fil7 {fill:#D1D3D4}
+                        .fnt1 {font-weight:bold;font-size:194.441px;font-family:'Calibri';cursor: pointer;}
+                        .fnt0 {font-weight:bold;font-size:194.445px;font-family:'Calibri'}
+    }
+    .initiating-item{
+        border: 1rem solid #8CD26E;
+        padding: 3rem;
+        background: $colorWhite;
+        .content-wrapper-two{
+            padding-left: 3rem;
+            position: relative;
+            &::before{
+                content: "";
+                background: $colorPrimary;
+                height: 100%;
+                width: 1px;
+                top: 1rem;
+                left: 5px;
+                position: absolute;
+            }
+            p{
+                position: relative;
+                span{
+                    position: absolute;
+                    width: 1rem;
+                    height: 1rem;
+                    left: -3rem;
+                    top: 1rem;
+                    background: $colorPrimary;
+                    border-radius: 50%;
+                }
+            }
+            ul{
+                margin-bottom: 0;
+                padding-bottom: 2rem;
+                li{
+                    list-style: disc;
+                }
+            }
+        }
+    }
+}

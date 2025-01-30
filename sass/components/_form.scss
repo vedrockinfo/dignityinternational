@@ -1,0 +1,110 @@
+form{
+    .form-group {
+        margin-bottom: 15px;
+        display: block;
+        position: relative;
+
+        &.focused {
+            label {
+                position: absolute;
+                top: -8px;
+                font-size: 10px;
+                background-color: rgba($colorGrey, $alpha: 1);
+                padding: 0.5px 5px;
+            }
+        }
+
+        &.inputted {
+            label {
+                position: absolute;
+                top: -8px;
+                font-size: 10px;
+                background-color: rgba($colorGrey, $alpha: 1);
+                padding: 0.5px 5px;
+            }
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 400;
+            color: $colorBlack;
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            transition: all 0.5s;
+            cursor: auto;
+    pointer-events: none;
+        }
+
+        input, select {
+            border-width: 0 0 1px 0;
+            background-color: rgba($colorWhite, $alpha: 1);
+            padding: 10px;
+            width: 100%;
+            border-color: #e1e6eb;
+            box-shadow: none;
+            height: 40px;
+            font-size: 13px;
+            line-height: 20px;
+            transition: all 0.2s linear;
+            &:focus{
+                box-shadow: none;
+                border-color: $colorBlack;
+            }
+        }
+        
+        select, option{
+            font-size: 14px;
+        }
+
+        textarea {
+            height: 120px;
+            border-width: 0 0 1px 0;
+            background-color: rgba($colorWhite, $alpha: 1);
+            padding: 10px 0;
+            width: 100%;
+            border-color: #e1e6eb;
+            box-shadow: none;
+            font-size: 13px;
+            resize: none;
+            line-height: 20px;
+            transition: all 0.2s linear;
+            margin-top: 1.5rem;
+            &:focus{
+                box-shadow: none;
+                border-color: $colorBlack;
+            }
+        }
+    }
+    .org-selection-grid, .organisation-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include respond (maxWidth992){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        gap: 0;
+    }
+    .intersted-grid, .expertise-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        & ~ .oti{
+            display: none;
+        }
+        &.other-checked{
+            & ~ .oti{
+                display: block;
+            }
+        }
+    }
+    .partner-row.oth-int, .work-ckehed {
+        margin-top: 1.5rem;
+        .form-group{
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+    accent-color: $colorPrimary;
+}

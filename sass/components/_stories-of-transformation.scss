@@ -1,0 +1,265 @@
+
+.stories-of-transformation{
+    .aspiring-leaders{
+        .row{
+            @include respond (minWidth1200){
+                padding: 0 5rem;
+            }
+            em {
+                display: block;
+                font-weight: 700;
+                margin-top: 1rem;
+            }
+            &:nth-child(even){
+                .content-wrapper{
+                    @include respond (minWidth768){
+                        padding-left: 2rem;
+                    }
+                }
+            }
+            &:nth-child(odd){
+                margin: 7rem 0;
+                @include respond(maxWidth992) {
+                    margin: 5rem 0;
+                  }
+                
+                  @include respond(maxWidth768) {
+                    margin: 3rem 0;
+                  }
+                @include respond (minWidth768){
+                    flex-direction: row-reverse;
+                }
+            }
+            &:nth-child(3){
+                @include respond (minWidth768){
+                    img{
+                        object-position: 100% 70%!important;
+                    }
+                }
+            }
+            img{
+                height: 37rem;
+                overflow: hidden;
+                width: 100%;
+                object-fit: cover;
+                object-position: 100% 38%;
+                box-shadow: 6px 6px 0 $colorGrey;
+            }
+        }
+    }
+    .our-volunteers {
+        .item{
+            background: $colorGrey;
+                padding: 20px;
+                position: relative;
+                &::after, &::before{
+                    content: "";
+                    background: $colorPrimary;
+                    width: 4rem;
+                    height: 4rem;
+                    position: absolute;
+                    z-index: 1;
+                }
+                &::before{
+                    top: 0;
+                    left: 0;
+                }
+                &::after{
+                    bottom: 0;
+                    right: 0;
+                }
+            .premium-person-info-container {
+                background: transparent;
+                position: relative;
+                z-index: 2;
+                padding: 30px;
+                border: 4px solid $colorWhite;
+                @media screen and (min-width:1400px) {
+                    min-height: calc(370px + 7rem);
+                }
+        
+                @media screen and (min-width:1200.5px) and (max-width:1399.9px) {
+                    min-height: calc(400px + 7rem);
+                }
+        
+                @media screen and (min-width:991.5px) and (max-width:1199.9px) {
+                    min-height: calc(450px + 7rem);
+                }
+        
+                .heading-six {
+                    text-align: center;
+                }
+        
+                .heading-five {
+                    margin: 1.5rem 0;
+                }
+        
+                .age-of-learners {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+}
+.our-learners {
+    background: $colorPrimary;
+    position: relative;
+    button.owl-prev, 
+    button.owl-next{
+        background: $colorWhite!important;
+        i{
+            color: $colorPrimary;
+        }
+    }
+    @include respond (minWidth992) {
+        button.owl-prev {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        button.owl-next {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &::before {
+        background-image: url(../img/curve-02.png);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 295px;
+        height: 177px;
+        transform: rotate(180deg);
+    }
+
+    &::after {
+        background-image: url(../img/curve-02.png);
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 1;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 295px;
+        height: 177px;
+    }
+
+    .sp-testimonial-free {
+        background: $colorWhite;
+        padding: 5rem;
+        @include respond (maxWidth768){
+            padding: 3rem;
+        }
+        height: 100%;
+        position: relative;
+        &::before{
+            content: "";
+            background: transparent;
+            border: 1px solid $colorBlack;
+            width: calc(100% - 3rem);
+            height: calc(100% - 3rem);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;z-index: 0;
+        }
+
+        .sp-testimonial-client-image {
+            margin: 0 auto 22px;
+            position: relative;
+            max-width: 10rem;
+            max-height: 10rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 1 / 1;
+                border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+                display: inline-block !important;
+                max-height: inherit;
+                z-index: 3;
+                position: relative;
+                object-position: top;
+                object-fit: cover;
+            }
+
+            &::before {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 2;
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                background-color: #ff2c9c;
+                width: 100%;
+                height: 100%;
+            }
+
+            &:after {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 1;
+                content: "";
+                position: absolute;
+                border-radius: 65% 35% 70% 30%/64% 31% 69% 36%;
+                background-color: #ffac00;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .sp-testimonial-content {
+            font-size: 16px;
+            line-height: 26px;
+            text-transform: none;
+            text-align: center;
+            letter-spacing: normal;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0 0 20px 0;
+        }
+
+        .sp-testimonial-client-name {
+            font-size: 16px;
+            line-height: 24px;
+            text-transform: none;
+            text-align: center;
+            letter-spacing: normal;
+            font-weight: 700;
+            font-style: normal;
+            margin: 0 0 8px 0;
+            padding: 0;
+            color: $colorPrimary;
+        }
+
+        .sp-testimonial-client-rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 15px;
+            gap: 3px;
+
+            i {
+                font-size: 19px;
+                color: #ffb900;
+            }
+        }
+    }
+}

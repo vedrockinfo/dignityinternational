@@ -1,0 +1,732 @@
+.child-donation {
+    .child-donation-grid {
+      display: grid;
+  
+      @include respond (minWidth992) {
+        grid-template-columns: 60% 40%;
+      }
+  
+      align-items: center;
+  
+      .child-donation-item {
+        @include respond (minWidth992) {
+          &:nth-child(2) {
+            padding-left: 50px;
+            padding-right: 5rem;
+          }
+        }
+  
+        @include respond (maxWidth992) {
+          margin-top: 5rem;
+          text-align: center;
+        }
+  
+        .dontaing-img {
+          position: relative;
+  
+          &::before {
+            content: '';
+            position: absolute;
+            background: url(../images/about-banner-bg.png) no-repeat center center;
+            background-size: 100% 100%;
+            top: 0;
+            left: -3px;
+            width: 103%;
+            height: 103%;
+            z-index: 2;
+          }
+  
+          img {
+            width: 100%;
+  
+            @include respond (minWidth992) {
+              height: 500px;
+            }
+  
+            object-fit: cover;
+            object-position: 100% 200%;
+          }
+        }
+  
+        h1 {
+          font-size: 27px;
+          color: $colorPrimary;
+          line-height: 34px;
+          font-weight: 300;
+          text-transform: uppercase;
+          margin: 0;
+        }
+  
+        h2 {
+          font-weight: 700;
+          font-size: 35px;
+          line-height: 50px;
+          color: $colorPrimary;
+        }
+      }
+    }
+  }
+
+  .generosity-section table {
+    font-size: 16px;
+  
+    @media screen and (max-width: 768px) {
+      font-size: 13px;
+    }
+  
+  }
+  
+  .generosity-section table thead {
+    background: $colorPrimary;
+  }
+  
+  .generosity-section table thead th.text-center {
+    color: #fff;
+  }
+  
+  .generosity-section table tbody tr td:first-child {
+    border-right: 1px solid #e0e0e0;
+    background: #e4ffe6;
+  }
+  
+  .generosity.donate {
+    background-image: url(../images/secondary-bg.jpg);
+    position: relative;
+    min-height: 39rem;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding: 7rem 0;
+  
+    &::before {
+      content: "";
+      background: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+    .container {
+      position: relative;
+    }
+  
+    .secondary-heading {
+      color: $colorWhite;
+    }
+  
+    @include respond (maxWidth768){
+      margin-top: 4rem;
+      padding: 4rem 0;
+    }
+  
+    .generosity-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+  
+      @include respond (maxWidth768){
+        grid-template-columns: repeat(1, 1fr);
+      }
+  
+      .generosity-grid-item {
+        background: $colorWhite;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
+        .card {
+          @include respond (maxWidth1200) {
+            text-align: center;
+          }
+  
+          @include respond (minWidth1400) {
+            height: 22rem;
+          }
+  
+          @media screen and (min-width:1200px) and (max-width:1399.9px) {
+            height: 25rem;
+          }
+  
+          display: block;
+  
+          .left-img {
+            height: 100%;
+  
+            @include respond (minWidth768) {
+              float: left;
+            }
+  
+            @include respond (minWidth1400) {
+              width: 25rem;
+            }
+  
+            @media screen and (min-width:1200px) and (max-width:1399.9px) {
+              width: 18rem;
+            }
+  
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+            }
+          }
+  
+          .right-content {
+            @include respond (minWidth768) {
+              float: right;
+            }
+  
+            @include respond (minWidth1400){
+              width: calc(100% - 25rem);
+            }
+  
+            @media screen and (min-width:1200px) and (max-width:1399.9px) {
+              width: calc(100% - 18rem);
+              padding: 15px 20px;
+            }
+  
+            align-content: center;
+            height: 100%;
+            padding: 15px 25px;
+  
+            a {
+              background: $colorPrimary;
+              color: $colorWhite;
+              padding: 5px 15px;
+              display: inline-block;
+              margin-bottom: 15px;
+              font-weight: 600;
+  
+              @include respond (minWidth1200){
+                font-size: 18px !important;
+              }
+  
+              span {
+                display: inline;
+  
+                @include respond (minWidth1200){
+                  font-size: 18px !important;
+                }
+              }
+            }
+  
+          }
+        }
+      }
+    }
+  }
+  .hero-section-donate{
+    background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top;
+      min-height: 323px;
+      position: relative;
+      &::before{
+        content: "";
+      background-color: #18181b;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+      }
+      .container{
+        position: relative;
+      }
+      .donation-wrapper{
+        background-color: rgba(0, 0, 0, .5);
+          border-radius: 6px;
+          box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .19);
+          color: $colorWhite;
+          padding: 3.2rem;
+          margin: 3.5rem 0;
+          h6{
+            font-size: 22.624px;
+            font-weight: 700;
+            line-height: 28.28px;
+            text-transform: none;
+            color: $colorWhite;
+          }
+          form{
+            margin: 2rem 0;
+            label{
+              font-size: 1.6rem;
+              margin-left: 0.5rem;
+            }
+            input{
+              accent-color: #e68619;
+              transform: scale(1.5);
+            }
+            p{
+              margin-top: 3rem;
+            }
+            button{
+              background: #e68619;
+              border-color: #e68619;
+              margin-top: 3rem;
+              font-size: 1.5rem;
+              font-weight: 700;
+              line-height: normal;
+              height: auto;
+              a{
+                color: $colorWhite;
+                line-height: normal;
+                height: 40px;
+                display: inline-grid;
+                place-content: center;
+              }
+              &:hover{
+                color: $colorWhite;
+                border-color: $colorWhite;
+                background: transparent;
+              }
+            }
+          }
+      }
+  }
+  
+  .donation-details{
+    .dlogo-wrapper{
+      width: 20rem;
+      padding-bottom: 4rem;
+      position: relative;
+      margin-bottom: 2.4rem;
+      &::before{
+        content: "";
+        background: $colorPrimary;
+        height: 5px;
+        width: 5rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      img{
+        width:100%;
+      }
+    }
+    .dontaing-img{
+      margin: 3rem 0;
+    }
+  
+    .form-area {
+      border-radius: 2px;
+      box-shadow: 6px 11px 24px 0 rgba(23, 31, 37, 0.12);
+      background: #fff;
+      padding: 30px 0 0;
+      @media screen and (max-width:992px) {
+        margin: 3rem 0 5rem;
+      }
+      .heading-six{
+        padding-bottom: 2rem;
+        position: relative;
+        margin: 0 2rem 2rem;
+        &::before{
+          content: "";
+          background: $colorPrimary;
+          height: 5px;
+          width: 5rem;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+    .donate-us {
+      .donate-col{
+        display: flex;
+        align-items: flex-end;
+        gap: 4rem;
+        flex-wrap: wrap;
+        padding: 0 32px;
+          margin-bottom: 1.5rem;
+          @media screen and (max-width:575px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1px;
+          }
+          label{
+            font-size: 1.4rem;
+            font-weight: 500;
+            @media screen and (min-width:575.8px) {
+              width: 25%;
+            & ~ *{
+              width: calc(100% - 25% - 4rem);
+            }
+            }
+          }
+      }
+  
+      .payable-amount{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 32px;
+        @media screen and (max-width:575px) {
+          flex-direction: column;
+        }
+        .left{
+          background: #f5f6f7;
+          min-height: 56px;
+          padding: 0 2rem;
+          @media screen and (max-width:575.1px) {
+            justify-content: center;
+          }
+          @media screen and (min-width:575.9px) {
+            width: calc(100% - 180px);
+          }
+          display: flex;
+          align-items: center;
+          img{
+            width: 25rem;
+          }
+        }
+        .right{
+          min-height: 56px;
+          padding: 0 2rem;
+          justify-content: center;
+          @media screen and (min-width:575px) {
+            width: 180px;
+          }
+          color: $colorWhite;
+          display: flex;
+          align-items: center;
+          background-image: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%);
+          background-color: #528ff0;
+          .total-amount{
+            font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+          }
+        }
+      }
+    .form-control {
+        padding: 10px 10px !important;
+        font-size: 16px;
+        border-radius: 0;
+      border-color: transparent !important;
+      border-bottom: 1px solid rgba($colorBlack, $alpha: 0.2) !important;
+      font-size: 1.4rem!important;
+      &:focus{
+        border-bottom: 1px solid rgba($colorBlack, $alpha: 1) !important;
+      }
+    }
+  
+    input[type="radio"],
+    input[type="checkbox"] {
+        &:checked {
+            accent-color: $colorPrimary;
+        }
+    }
+  
+    textarea {
+        resize: none;
+    }
+  
+      .submit-row {
+          margin-top: 2rem;
+      }
+  }
+  }
+  .donation-cards {
+    padding: 7rem 0;
+  
+    @include respond (maxWidth768){
+      padding: 4rem 0;
+    }
+  
+    .card {
+      transition: all 0.5s;
+  
+      &:hover {
+        background: #f7f7f7;
+        transform: translateY(-5px);
+      }
+  
+      .c-wrapper {
+        clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 99%, 0 75%);
+      }
+  
+      @include respond (maxWidth992) {
+        margin-bottom: 3rem;
+      }
+  
+      .card-body {
+        position: relative;
+        .heading-tertiary{
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+        }
+  
+        @include respond (minWidth768) {
+          .link-one {
+            position: absolute;
+            bottom: 3rem;
+            width: max-content;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+  
+        @media screen and (min-width:768px) {
+          height: 30rem;
+        }
+  
+        @media screen and (min-width:992px) {
+          height: 40rem;
+        }
+  
+        @media screen and (min-width:1200px) {
+          height: 34rem;
+        }
+  
+        @media screen and (min-width:1400px) {
+          height: 31rem;
+        }
+      }
+    }
+  
+    .card-title {
+      color: $colorPrimary;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .what-we-do {
+    padding: 0 0 7rem 0;
+  
+    @include respond (maxWidth768){
+      padding: 0 0 4rem 0;
+    }
+  
+    @include respond (maxWidth992){
+      .row {
+        flex-direction: column-reverse;
+      }
+  
+      .content {
+        margin-bottom: 30px;
+      }
+    }
+  
+    .devi-img {
+      @include respond (minWidth992) {
+        padding-right: 5px;
+      }
+  
+      img {
+        border-radius: 1rem;
+      }
+    }
+  
+    .dontaion-partner-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 3rem;
+      gap: 3rem;
+  
+      @include respond (maxWidth992){
+        grid-template-columns: repeat(3, 1fr);
+      }
+  
+      @include respond (maxWidth768){
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @include respond (maxWidth575) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+  
+      &__item {
+        text-align: center;
+      }
+  
+      img {
+        height: 6rem;
+    margin: auto;
+    width: auto;
+      }
+    }
+  }
+
+  .how-do-we-work {
+    padding: 7rem 0;
+  
+    @include respond (maxWidth768) {
+      padding: 4rem 0;
+    }
+  
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  
+    .devi-img {
+      position: relative;
+  
+      @include respond (maxWidth992) {
+        margin-top: 30px;
+      }
+  
+      img {
+        transition: all 0.5s;
+        border-radius: 10px;
+      }
+  
+      &:hover::after {
+        left: 20px;
+        top: 20px;
+      }
+  
+      &:hover img {
+        transform: translate(-10px, -10px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+          rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  
+        @include respond (maxWidth768) {
+          transform: none !important;
+        }
+      }
+  
+      &::after {
+        background: $colorSecondary;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        left: 0;
+        position: absolute;
+        border-radius: 10px;
+        transition: all 0.5s;
+  
+        @include respond (maxWidth768) {
+          content: none !important;
+        }
+      }
+    }
+  }
+  
+  .faq {
+    padding-bottom: 7rem;
+  
+    @include respond (maxWidth768) {
+      padding-bottom: 4rem;
+    }
+  
+    button {
+      font-size: 20px;
+      font-weight: 600;
+      padding: 20px 20px;
+  
+      @include respond (maxWidth768) {
+        font-size: 14px;
+      }
+  
+      &:hover {
+        background-color: rgba($colorSecondary, $alpha: 0.12);
+      }
+    }
+  
+    .accordion-button {
+      &:not(.collapsed) {
+        color: $colorWhite;
+        background: $colorPrimary;
+      }
+  
+      font-size: 1.4rem;
+  
+      &::after {
+        filter: sepia(2) brightness(2);
+      }
+    }
+  }
+  .donationone-form {
+    background: $colorGrey;
+    margin-top: 4rem;
+    padding: 7rem 0;
+  
+    @include respond (maxWidth768) {
+      margin-top: 4rem;
+      padding: 4rem 0;
+    }
+  
+    .alfa-input {
+      @include respond (minWidth768) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 10px;
+      }
+  
+      @include respond (minWidth992) {
+        justify-content: space-between;
+      }
+  
+      @include respond (maxWidth768) {
+        display: block;
+  
+        .f-input {
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+  
+      .f-input {
+        @include respond (minWidth992) {
+          width: calc(100% / 7 - 10px);
+        }
+  
+        position: relative;
+  
+        label {
+          font-size: 15px;
+          color: #2a2b6b;
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+  
+        button {
+          @include respond (minWidth992) {
+            width: 100%;
+          }
+  
+          @include respond (minWidth768) {
+            margin: 0;
+          }
+        }
+      }
+    }
+  
+    .form-control {
+      border: 1px solid #dcdee0;
+      background: #fff;
+      border-radius: 5px;
+      color: rgba(42, 42, 42, .6);
+      padding: 10px 15px;
+      box-sizing: border-box;
+      width: 100%;
+      font-size: 15px;
+  
+      &:focus {
+        box-shadow: none;
+        border-color: #dcdee0;
+      }
+    }
+  }
+  
+  .donationone-form .form-control~span {
+    position: absolute;
+    top: 0px;
+  
+    @include respond (minWidth768) {
+      left: -10px;
+    }
+  
+    @include respond (maxWidth768) {
+      right: 20px;
+    }
+  }

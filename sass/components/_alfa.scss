@@ -1,0 +1,12 @@
+.alfa-section {
+    .sub-heading {
+        @include respond (minWidth992) {
+            text-align: left;
+        }
+    }
+    h2{
+        @include respond (maxWidth768){
+            text-align: center;
+        }
+    }
+}

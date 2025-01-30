@@ -1,0 +1,36 @@
+@import "./abstract/function";
+@import "./abstract/mixins";
+@import "./abstract/responsive";
+@import "./abstract/varaiables";
+
+@import "./base/animation";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+@import "./components/alfa";
+@import "./components/button";
+@import "./components/our-story";
+@import "./components/contact";
+@import "./components/d-talks";
+@import "./components/form";
+@import "./components/literacy-now-app";
+@import "./components/our-projects";
+@import "./components/our-team";
+@import "./components/annualReports";
+@import "./components/partner";
+@import "./components/past-events";
+@import "./components/publications";
+@import "./components/stories-of-transformation";
+@import "./components/toolkits";
+@import "./components/upcoming-events";
+@import "./components/worldmap";
+
+@import "./layout/footer";
+@import "./layout/header";
+
+@import "./pages/about-us";
+@import "./pages/donation";
+@import "./pages/get-involved";
+@import "./pages/home";
+@import "./pages/press-news";

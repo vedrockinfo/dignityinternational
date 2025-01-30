@@ -1,0 +1,54 @@
+.past-events-section{
+    background: $colorPrimary;
+    .row{
+        row-gap:3rem;
+        &:first-child{
+            @include respond (minWidth768){
+                margin-bottom: 4rem;
+            }
+        }
+    }
+    .past-content{
+        background: $colorWhite;
+        box-shadow: $boxShadow;
+        height: 100%;
+        padding: 2.5rem;
+        .heading-tertiary{
+            background: $colorPrimary;
+            color: $colorWhite;
+            padding: 5px 3rem;
+            display: inline-block;
+            margin: 0 0 1.5rem -2.5rem;
+        }
+        .content-para{
+            margin-bottom: 3rem;
+        }
+        .past-img{
+            @include respond (minWidth768){
+                width: calc(100% - 10rem);
+                overflow: hidden;
+                height: 30rem;
+                margin: auto;
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                    height: 100%;
+                }
+            }
+        }
+        .eevents-grid{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            a{
+                display: inline-block;
+                    max-width: none;
+                    padding: 0 30px;
+            }
+            @include respond (maxWidth768){
+                flex-direction: column;
+            }
+        }
+    }
+}

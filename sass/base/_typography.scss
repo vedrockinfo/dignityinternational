@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: $colorBlack;
+  @include respond (maxWidth992){
+    font-size: 14px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.heading-hero-primary {
+  text-transform: uppercase;
+  font-size: 58px;
+  font-weight: 700;
+  color: $colorWhite;
+  line-height: 1.26;
+  text-shadow: 3px 3px 20px #00000066, -2px 1px 30px #00000066;
+  @media screen and (min-width:1399.9px) {
+    font-size: 67px;
+  }
+
+  @media screen and (min-width:992.1px) and (max-width:1199.9px) {
+    font-size: 48px;
+  }
+
+  @include respond(maxWidth992) {
+    font-size: 36px;
+  }
+
+  @include respond(maxWidth768) {
+    font-size: 36px;
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include respond(maxWidth575) {
+    font-size: 30px;
+  }
+  @media screen and (max-width:300px) {
+    font-size: 26px;
+  }
+}
+
+.heading-hero-secondary {
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: 200;
+  color: $colorWhite;
+  text-align: center;
+  line-height: 1.26;
+  display: block;
+
+  @include respond(maxWidth992) {
+    font-size: 36px;
+  }
+
+  @include respond(maxWidth768) {
+    font-size: 30px;
+  }
+
+  @include respond(maxWidth575) {
+    font-size: 24px;
+  }
+}
+
+.heading-primary {
+  line-height: 1.25em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 700;
+  color: $colorPrimary;
+  @include respond(maxWidth992) {
+    margin-bottom: 30px;
+    font-size: 36px;
+  }
+
+  @include respond(maxWidth768) {
+    margin-bottom: 25px;
+    font-size: 30px;
+    text-align: center  ;
+  }
+
+  @include respond(maxWidth575) {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+}
+
+.heading-secondary {
+  line-height: 1.25em;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba($colorPrimary, 1);
+}
+
+.heading-tertiary{
+  line-height: 1;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 700;
+  color: $colorPrimary;
+  @include respond(maxWidth992) {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  @include respond(maxWidth768) {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  @include respond(maxWidth575) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
+.heading-fourth{
+  line-height: 1.25em;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 700;
+  color: $colorPrimary;
+  @include respond(maxWidth992) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  @include respond(maxWidth768) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  @include respond(maxWidth575) {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+}
+
+.heading-five {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: $colorPrimary;
+  text-align: center;
+}
+
+.sub-heading{
+  line-height: 1.25em;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 700;
+  color: $colorPrimary;
+  @include respond(maxWidth992) {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  @include respond(maxWidth768) {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  @include respond(maxWidth575) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
+p, 
+span, 
+li {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: normal;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include respond(maxWidth992) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+.toolkit-heads{
+  font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $colorWhite;
+    position: relative;
+    margin-bottom: 30px;
+    padding: 8px 20px;
+    display: inline-block; 
+    &::before{
+      content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $colorPrimary;
+    z-index: -1;
+    transform: skewX(25deg) rotate(-2deg);
+    }
+    &::after{
+      content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $colorWhite;
+    z-index: -2;
+    transform: skewX(25deg) rotate(5deg);
+    }
+}
